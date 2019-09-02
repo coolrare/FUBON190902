@@ -25,4 +25,8 @@ export class AppComponent implements OnInit {
   cancelInput() {
     this.keyword = '';
   }
+
+  doDelete(id) {
+    console.log('您剛剛刪除了 id=' + id + ' 的資料');
+  }
 }

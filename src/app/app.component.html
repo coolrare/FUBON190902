@@ -8,7 +8,7 @@
       <div id="ctl00_cphBody_divError"></div>
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
         <!-- Article START-->
-        <app-article [item]="item" *ngFor="let item of data"></app-article>
+        <app-article [item]="item" (delete)="doDelete($event)" *ngFor="let item of data"></app-article>
         <!-- Article END-->
         <!-- <pre>{{data|json}}</pre> -->
       </div>
