@@ -14,7 +14,7 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.datasvc.loadData()
-    .then((data) => {
+    .subscribe((data) => {
       this.data = data;
     });
   }
