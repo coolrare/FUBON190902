@@ -7,7 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   keyword = 'demo1';
+  data: any = {};
 
+  ngOnInit(): void {
+    fetch('/api/articles.json')
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      this.data = data;
+    });
+  }
   confirmInput(str: string) {
     this.keyword = str;
   }
