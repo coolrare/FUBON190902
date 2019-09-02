@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   keyword = 'demo1';
+
+  confirmInput(str: string) {
+    this.keyword = str;
+  }
+  cancelInput() {
+    this.keyword = '';
+  }
 }
