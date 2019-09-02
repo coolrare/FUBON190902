@@ -94,10 +94,11 @@
         <div class="widget search">
           <div class="widget-content">
             <div id="searchbox">
-              <input type="text" placeholder="請輸入搜尋關鍵字" accesskey="s" [value]="keyword"
-              (keyup.enter)="confirmInput($event.target.value)"
+              <input #tKeyword type="text" placeholder="請輸入搜尋關鍵字" accesskey="s" [value]="keyword"
+              (keyup.enter)="confirmInput(tKeyword.value)"
               (keyup.escape)="cancelInput()">
-              <input type="button" value="搜尋" id="searchbutton">
+              <input type="button" value="搜尋"
+                     (click)="confirmInput(tKeyword.value)">
               <pre>{{keyword}}</pre>
             </div>
           </div>
