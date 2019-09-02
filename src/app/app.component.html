@@ -12,7 +12,7 @@
           <header class="post-header">
             <h2 class="post-title">
               <a [href]="item.href">
-                {{item.title}}
+                {{item.title | mask:5}}
               </a>
             </h2>
             <div class="post-info clearfix">
