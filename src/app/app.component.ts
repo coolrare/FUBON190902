@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from './data.service';
+import { Articles } from './articles';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { DataService } from './data.service';
 })
 export class AppComponent {
   keyword = 'demo1';
-  data: any = {};
+  data: Articles[] = [];
 
   constructor(private datasvc: DataService) { }
 
